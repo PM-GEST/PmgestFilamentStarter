@@ -1,0 +1,143 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/*
+ * Ce fichier css est utilisé pour personnaliser le thème de Filament.
+ */
+
+/* --- Général --- */
+.fi-main{
+    max-width: 98%;
+}
+
+
+/* --- Sidebar --- */
+
+/* Général */
+.fi-sidebar-nav{
+    @apply bg-white border-r border-gray-200 ;
+    padding-right: 20px;
+    width: 300px;
+}
+
+/* Ligne de la sidebar */
+.fi-sidebar-item{
+    @apply text-gray-700  font-semibold ;
+}
+/* Ligne de la sidebar quand lien actif */
+.fi-sidebar-item {
+    &.fi-active {
+        & > .fi-sidebar-item-btn {
+            @apply  rounded-sm;
+        }
+    }
+}
+/* Bouton de la ligne de la sidebar */
+.fi-sidebar-item-btn{
+    @apply rounded-sm
+}
+
+/* Texte de la ligne de la sidebar */
+.fi-sidebar-item-label{
+    @apply text-[12px]
+}
+/* Icone de la ligne de la sidebar */
+.fi-sidebar-item-icon{
+    @apply w-5 text-gray-700
+}
+
+/* Icone de la ligne de la sidebar quand lien actif */
+.fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+    @apply text-primary-600;
+}
+
+/* --- Tables --- */
+
+/* Div générale des tables */
+.fi-ta-ctn{
+    @apply rounded-sm
+}
+
+/* En-tête des tables (thead) */
+
+.fi-ta-header-cell {
+    @apply bg-gray-200
+}
+
+.fi-ta-actions-header-cell {
+    @apply bg-gray-200
+}
+
+/* --- Breadcrumbs --- */
+.fi-breadcrumbs-item-label{
+
+}
+
+.fi-breadcrumbs-item-separator{
+
+}
+
+/* --- Boutons --- */
+
+.fi-btn
+{
+    @apply rounded-sm
+}
+
+/* --- Section --- */
+
+.fi-section {
+    @apply rounded-sm
+}
+
+.fi-contained{
+    @apply rounded-sm
+}
+
+.fi-fieldset{
+    @apply rounded-sm
+}
+
+/** --- Formulaires --- */
+
+.fi-ta-select{
+    @apply rounded-sm;
+}
+
+.fi-input-wrp{
+    @apply rounded-sm;
+}
+
+.fi-select-input {
+    @apply rounded-sm;
+}
+
+.fi-dropdown-panel{
+    @apply rounded-sm;
+}
+
+
+/* --- Sidebar footer --- */
+
+.sidebar-footer{
+    @apply bg-white border-r border-gray-200 w-[300px] flex items-center justify-center p-4;
+}
+
+.sidebar-footer-link{
+    @apply flex items-center justify-center
+}
+
+.sidebar-footer-img{
+    @apply w-3/4
+}
+
+/** --- Cluster sidebar --- */
+
+.fi-page-sub-navigation-sidebar-ctn
+{
+    @apply w-[200px]
+}
+
+

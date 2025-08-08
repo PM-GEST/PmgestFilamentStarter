@@ -1,0 +1,38 @@
+{
+    "name": "pm-gest/filament-starter",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "PmGest\\FilamentStarter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Timothée Millot"
+        }
+    ],
+    "require": {
+        "filament/filament": "~4.0",
+        "laravel/framework": "^12.0",
+        "laravel/tinker": "^2.10.1"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "laravel/dusk": "^8.3",
+        "laravel/pail": "^1.2.2",
+        "laravel/pint": "^1.13",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.2",
+        "pestphp/pest-plugin-livewire": "^3.0"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PmGest\\FilamentStarter\\AppPanelProvider"
+            ]
+        }
+    }
+}
