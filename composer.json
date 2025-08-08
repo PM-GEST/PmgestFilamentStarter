@@ -31,7 +31,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PmGest\\FilamentStarter\\AppPanelProvider"
+                "PmGest\\FilamentStarter\\AppPanelProvider",
+                "PmGest\\FilamentStarter\\PmgestFilamentStarterProvider"
             ]
         }
     }
