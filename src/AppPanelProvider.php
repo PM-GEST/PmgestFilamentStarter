@@ -5,6 +5,8 @@ namespace PmGest\FilamentStarter;
 use Filament\Support\Colors\Color;
 use PmGest\FilamentStarter\Pages\Auth\ProfilePage;
 use PmGest\FilamentStarter\Pages\Dashboard;
+use Filament\PanelProvider;
+use Filament\Panel;
 use function app_path;
 
 class AppPanelProvider extends PanelProvider
