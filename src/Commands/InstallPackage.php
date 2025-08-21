@@ -14,7 +14,10 @@ class InstallPackage extends Command
     public function handle()
     {
         // Installation de filament
-        $this->call('filament:install --panels --no-interaction');
+        $this->call('filament:install', [
+            '--panels' => true,
+            //'--no-interaction' => true,
+        ]);
         $this->info('Filament installé');
 
 
