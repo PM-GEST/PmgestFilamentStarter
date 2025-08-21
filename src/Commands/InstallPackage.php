@@ -3,6 +3,7 @@
 namespace PmGest\FilamentStarter\Commands;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Process\Process;
 
 class InstallPackage extends Command
 {
@@ -12,11 +13,31 @@ class InstallPackage extends Command
 
     public function handle()
     {
-        $this->call('filament:install');
+        // Installation de filament
+        $this->call('filament:install --panels');
         $this->info('Filament installé');
 
+
+
+        // Installation des packages de dev
+        $this->info('Installation des dépendances de dev...');
+
+        $packages = [
+            'laravel/dusk:^8.3',
+        ];
+
+        foreach ($packages as $package) {
+            $this->info("→ Installation de {$package}");
+            $process = Process::fromShellCommandline("composer require --dev {$package}");
+            $process->setTimeout(null);
+            $process->run(function ($type, $buffer) {
+                echo $buffer;
+            });
+        }
+
         $this->call('dusk:install');
-        $this->info('Dusk installé');
+
+        $this->info('✅ Dépendances de dev installées !');
     }
 
 }
