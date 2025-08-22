@@ -43,7 +43,9 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
         ], 'filament-panel-provider');
 
 
-        if (class_exists(\App\Providers\Filament\AppPanelProvider::class)) {
+        $providerPath = app_path('Providers/Filament/AppPanelProvider.php');
+        if (file_exists($providerPath)) {
+            require_once $providerPath;
             $this->app->register(\App\Providers\Filament\AppPanelProvider::class);
         }
 
