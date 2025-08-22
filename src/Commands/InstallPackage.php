@@ -14,12 +14,12 @@ class InstallPackage extends Command
     public function handle()
     {
         // Installation de filament
-        $this->call('filament:install');
+        $this->call('filament:install', [
+            '--no-interaction' => true,
+        ]);
         $this->info('Filament installé');
 
         $this->call('vendor:publish', ['--tag' => 'filament-panel-provider']);
-
-
 
         // Installation des packages de dev
         $this->info('Installation des dépendances de dev...');
