@@ -17,6 +17,8 @@ class InstallPackage extends Command
         $this->call('filament:install');
         $this->info('Filament installé');
 
+        $this->call('vendor:publish', ['--tag' => 'filament-panel-provider']);
+
 
 
         // Installation des packages de dev
