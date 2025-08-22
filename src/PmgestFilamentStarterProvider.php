@@ -38,6 +38,10 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
             ]);
         }
 
+        $this->publishes([
+            __DIR__ . '/AppPanelProvider.php' => app_path('Providers/AppPanelProvider.php'),
+        ], 'filament-panel-provider');
+
         // Génère le logo PM-GEST en bas de la sidebar grace aux hooks Filament, voir composant blade components.pm-gest-component
         FilamentView::registerRenderHook(
             PanelsRenderHook::SIDEBAR_FOOTER,
