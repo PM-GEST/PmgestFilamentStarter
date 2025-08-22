@@ -39,7 +39,7 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../stubs/MonPackageServiceProvider.stub' => app_path('Providers/Filament/AppPanelProvider.php'),
+            __DIR__ . '/../stubs/AppPanelProvider.stub' => app_path('Providers/Filament/AppPanelProvider.php'),
         ], 'filament-panel-provider');
 
         if (class_exists(\App\Providers\Filament\AppPanelProvider::class)) {
