@@ -1,6 +1,6 @@
 <?php
 
-namespace PmGest\stubs;
+namespace App\Providers\Filament;
 
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
