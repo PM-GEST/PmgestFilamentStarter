@@ -33,6 +33,7 @@
             "providers": [
                 "PmGest\\FilamentStarter\\PmgestFilamentStarterProvider"
             ]
+
         }
     }
 }
