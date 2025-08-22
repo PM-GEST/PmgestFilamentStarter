@@ -37,7 +37,6 @@ class InstallPackage extends Command
             });
         }
 
-        $this->call('dusk:install');
 
         $this->info('✅ Dépendances de dev installées !');
     }
