@@ -35,8 +35,11 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallPackage::class,
+                Resfresh::class
             ]);
         }
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/components', 'pm-gest-component');
 
         $this->publishes([
             __DIR__ . '/../stubs/AppPanelProvider.stub' => app_path('Providers/Filament/AppPanelProvider.php'),
@@ -44,6 +47,13 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/Filament/Pages/Dashboard.php' => app_path('Filament/Pages/Dashboard.php'),
+        ], 'filament-panel-provider');
+        $this->publishes([
+            __DIR__ . '/Filament/Pages/Auth/ProfilePage.php' => app_path('Filament/Pages/Auth/ProfilePage.php'),
+        ], 'filament-panel-provider');
+
+        $this->publishes([
+            __DIR__ . '/Commands/Refresh.php' => app_path('Commands/Refresh.php'),
         ], 'filament-panel-provider');
         $this->publishes([
             __DIR__ . '/../resources/css/filament/app/theme.css' => $this->app->basePath('resources/css/filament/app/theme.css'),
@@ -54,12 +64,12 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
         ], 'filament-panel-provider');
 
         $this->publishes([
-            __DIR__ . '/../routes/web.php' => $this->app->basePath('routes/web.php'),
+            __DIR__ . '/../database/seeders/DatabaseSeeder.php' => $this->app->basePath('database/seeders/DatabaseSeeder.php'),
         ], 'routes');
 
 
 
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+
         // Génère le logo PM-GEST en bas de la sidebar grace aux hooks Filament, voir composant blade components.pm-gest-component
         FilamentView::registerRenderHook(
             PanelsRenderHook::SIDEBAR_FOOTER,
