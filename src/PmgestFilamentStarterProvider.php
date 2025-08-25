@@ -45,10 +45,18 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
         $this->publishes([
             __DIR__ . '/Filament/Pages/Dashboard.php' => app_path('Filament/Pages/Dashboard.php'),
         ], 'filament-panel-provider');
+        $this->publishes([
+            __DIR__ . '/../resources/css/filament/app/theme.css' => $this->app->basePath('resources/css/filament/app/theme.css'),
+        ], 'filament-panel-provider');
+
+        $this->publishes([
+            __DIR__ . '/../routes/web.php' => $this->app->basePath('routes/web.php'),
+        ], 'filament-panel-provider');
 
         $this->publishes([
             __DIR__ . '/../routes/web.php' => $this->app->basePath('routes/web.php'),
         ], 'routes');
+
 
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');

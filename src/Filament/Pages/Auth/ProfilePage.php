@@ -1,6 +1,6 @@
 <?php
 
-namespace PmGest\FilamentStarter\Filament\Pages\Auth;
+namespace App\Filament\Pages\Auth;
 
 use Filament\Actions\Action;
 use Filament\Actions\Concerns\HasInfolist;
