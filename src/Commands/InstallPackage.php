@@ -26,7 +26,7 @@ class InstallPackage extends Command
         $this->info('Installation des dépendances de dev...');
 
         $packages = [
-            'laravel/dusk:^8.3',
+           //'laravel/dusk:^8.3',
         ];
 
         foreach ($packages as $package) {
