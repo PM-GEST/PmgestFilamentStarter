@@ -1,8 +1,7 @@
 <?php
 
-namespace PmGest\FilamentStarter\Pages\Auth;
+namespace PmGest\FilamentStarter\Filament\Pages\Auth;
 
-use Closure;
 use Filament\Actions\Action;
 use Filament\Actions\Concerns\HasInfolist;
 use Filament\Auth\Pages\EditProfile as BaseEditProfile;
@@ -22,7 +21,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use function __;
-use function array_key_exists;
 use function auth;
 use function bcrypt;
 use function filament;

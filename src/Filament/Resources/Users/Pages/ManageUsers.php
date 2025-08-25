@@ -1,11 +1,11 @@
 <?php
 
 
-namespace TimotheMillot\FilamentPmgest\Resources\Users\Pages;
+namespace PmGest\FilamentStarter\Filament\Resources\Users\Pages;
 
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
-use TimotheMillot\FilamentPmgest\Resources\Users\UserResource;
+use PmGest\FilamentStarter\Filament\Resources\Users\UserResource;
 
 class ManageUsers extends ManageRecords
 {

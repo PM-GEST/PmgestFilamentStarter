@@ -1,6 +1,6 @@
 <?php
 
-namespace TimotheMillot\FilamentPmgest\Resources\Users;
+namespace PmGest\FilamentStarter\Filament\Resources\Users;
 
 use App\Filament\Resources\Users\BackedEnum;
 use App\Models\User;
@@ -17,8 +17,8 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use PmGest\FilamentStarter\Filament\Resources\Users\Pages\ManageUsers;
 use Spatie\Permission\Models\Role;
-use TimotheMillot\FilamentPmgest\Resources\Users\Pages\ManageUsers;
 use function filled;
 
 
