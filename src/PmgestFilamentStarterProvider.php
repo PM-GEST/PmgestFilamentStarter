@@ -35,7 +35,7 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallPackage::class,
-                Resfresh::class
+                Refresh::class
             ]);
         }
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
