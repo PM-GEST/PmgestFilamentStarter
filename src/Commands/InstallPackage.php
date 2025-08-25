@@ -20,6 +20,7 @@ class InstallPackage extends Command
         $this->info('Filament installé');
 
         $this->call('vendor:publish', ['--tag' => 'filament-panel-provider']);
+        $this->call('vendor:publish', ['--tag' => 'routes']);
 
         // Installation des packages de dev
         $this->info('Installation des dépendances de dev...');

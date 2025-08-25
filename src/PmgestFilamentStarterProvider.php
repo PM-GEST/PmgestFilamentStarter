@@ -42,6 +42,14 @@ class PmgestFilamentStarterProvider  extends ServiceProvider
             __DIR__ . '/../stubs/AppPanelProvider.stub' => app_path('Providers/Filament/AppPanelProvider.php'),
         ], 'filament-panel-provider');
 
+        $this->publishes([
+            __DIR__ . '/Filament/Pages/Dashboard.php' => app_path('Filament/Pages/Dashboard.php'),
+        ], 'filament-panel-provider');
+
+        $this->publishes([
+            __DIR__ . '/../routes/web.php' => $this->app->basePath('routes/web.php'),
+        ], 'routes');
+
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         // Génère le logo PM-GEST en bas de la sidebar grace aux hooks Filament, voir composant blade components.pm-gest-component

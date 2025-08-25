@@ -1,6 +1,6 @@
 <?php
 
-namespace PmGest\FilamentStarter\Filament\Pages;
+namespace App\Filament\Pages;
 
 use Filament\Pages\Dashboard as BaseDashboard;
 use Filament\Support\Icons\Heroicon;
