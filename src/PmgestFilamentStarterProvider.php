@@ -8,6 +8,7 @@ use Filament\View\PanelsRenderHook;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Blade;
 use PmGest\FilamentStarter\Commands\InstallPackage;
+use PmGest\FilamentStarter\Commands\Refresh;
 use Illuminate\Support\ServiceProvider;
 
 class PmgestFilamentStarterProvider  extends ServiceProvider
